@@ -1,0 +1,6 @@
+if setup gives error of gulp and is not running
+remove node modules 
+
+rm -rf node_modules/
+
+and run npm install command again
