@@ -1,0 +1,95 @@
+GET, POST, PUT, DELETE
+
+CREATE
+READ
+UPDATE
+DELETE
+
+====================
+
+nodemon (server watch)
+npm install -g nodemon
+
+after u install nodemon, run index.js like below
+> nodemon index.js
+insead of 
+>run index.js
+
+express (routing)
+dont install it globally coz its routing for the project
+> npm install express
+
+after uou install express you will require express in index.js and index.js changes ...
+
+SQLite
+https://www.sqlite.org
+
+===================
+
+
+> npm -v
+> node --version
+
+create node project
+
+> cd restful
+> npm init
+
+set entry point (index.js or app.js)
+
+create entry point file
+
+> create index.js
+> touch index.js
+
+> echo 'hello' >> index.js
+
+run index.js
+
+> node index.js
+
+
+
+index.js code
+=============
+const http = require('http');
+const site = http.createServer(function(req,res){
+res.setHeader('Content-Type','text/html');
+res.end('<h1>Local Server is working...</h1>');
+});
+site.listen(3000);
+
+
+if you dont see anything type in index.js some js code like console.log anything and then run
+
+> node index.js
+
+http://localhost:3000
+
+=====================
+
+how node accesses a file
+
+const c = require('./hello.js');
+
+./ is required for same folder path
+./hello.js assumes that hello.js is in same folder
+
+=====================
+
+index.js and package.json setup
+complete-json-ajax-course
+> section 11 > lessons 167, 168, 169, 170, 171
+
+
+
+
+
+
+
+
+
+
+
+
+

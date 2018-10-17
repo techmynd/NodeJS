@@ -1,0 +1,12 @@
+// build local server
+// index.js code
+
+const http = require('http');
+const site = http.createServer(function(req,res){
+	console.log('working...');
+});
+// port listen // fireup local server
+site.listen(3000);
+// go to http://localhost:3000
+// run following command 
+// > node index.js
