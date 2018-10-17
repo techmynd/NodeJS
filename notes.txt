@@ -4,3 +4,28 @@ remove node modules
 rm -rf node_modules/
 
 and run npm install command again
+
+
+===============================
+
+
+> mkdir project1
+
+check npm and node
+
+> npm -v
+> node --version
+
+create node project
+
+> cd project1
+> npm init
+
+set entry point (index.js or app.js)
+
+create entry point file
+
+> create index.js
+> touch index.js
+
+echo 'hello' >> index.js
