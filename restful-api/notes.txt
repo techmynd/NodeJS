@@ -8,6 +8,7 @@ DELETE
 ====================
 
 nodemon (server watch)
+======================
 npm install -g nodemon
 
 after u install nodemon, run index.js like below
@@ -16,10 +17,11 @@ insead of
 >run index.js
 
 express (routing)
+==================
 dont install it globally coz its routing for the project
 > npm install express
 
-after uou install express you will require express in index.js and index.js changes ...
+after you install express you will require express in index.js and index.js changes ...
 
 SQLite
 https://www.sqlite.org
@@ -86,7 +88,47 @@ complete-json-ajax-course
 
 
 
+https://nodejs.org/en/
+https://www.npmjs.com/package/body-parser
+https://www.npmjs.com/package/nodemon
+https://www.npmjs.com/package/express
+https://www.npmjs.com/package/sqlite3
+https://expressjs.com/ https://expressjs.com/en/guide/database-integration.html
 
+
+Setup
+======
+Install Node.js runtime and npm package manager https://nodejs.org/en/
+
+Open terminal > mkdir project1 
+
+Check NPM and Node npm -v node --version
+
+Create a Node project > cd  project1 npm init  
+
+Set entry point: (index.js) or app.js
+
+Create entry point file create index.js touch index.js echo 'Hello' >> index.js
+
+Start index.js app localhost node index.js
+
+HTTP
+
+Node.js has a built-in module called HTTP http://localhost:3000/
+
+Install Express https://expressjs.com/ npm install --save express   Nodemon
+
+nodemon reload, automatically https://nodemon.io/ npm install -g nodemon
+
+Middleware
+
+https://www.npmjs.com/package/body-parser Browser go to  http://localhost:3000/ npm install body-parser
+
+Postman install extension https://github.com/expressjs/body-parser
+
+Install all package json 
+
+npm install
 
 
 
