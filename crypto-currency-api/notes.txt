@@ -1,0 +1,9 @@
+run command
+
+> nodemon index.js
+
+and go to http://localhost:3000
+
+Type bitcoin in search and see results
+
+
