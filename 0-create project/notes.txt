@@ -1,0 +1,76 @@
+> npm init
+> echo 'Hello' >> index.js
+
+
+
+Copy following in index.js
+===========================
+var express = require('express')
+var app = express()
+ 
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+ 
+app.listen(3000);
+
+
+> npm install express
+
+now you can run
+
+> node index.js
+
+and go to 
+http://localhost:3000
+to see index.js running
+
+then
+
+> npm install -g nodemon
+
+or
+npm install --save-dev nodemon
+
+now you can do 
+
+> nodemon index.js 
+
+this will run index.js and watch the file for changes
+but you will still refresh page when u make changes to index,js
+however u dont need to restart server to see changes
+
+then 
+
+> npm install body-parser
+
+
+for css and js minification do these
+=================================
+> npm install --save-dev uglify-js
+> npm install --save-dev uglifyjs-folder
+> npm install --save-dev autoprefixer
+> npm install --save-dev node-sass
+> npm install --save-dev npm-run-all
+> npm install --save-dev postcss-cli
+
+
+
+
+
+
+
+Commands to run project
+=======================
+> nodemon index.js
+and browse http://localhost:3000
+
+or
+
+Final command
+=============
+> npm run build:process
+
+This will compress css and js and minify these and also run nodemon
+and then browse http://localhost:3000
+

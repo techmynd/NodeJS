@@ -1,0 +1,23 @@
+express
+========
+> node index.js
+
+or
+
+nodemon
+========
+> nodemon index.js
+and browse http://localhost:3000
+
+or
+
+Final command
+=============
+> npm run build:process
+
+This will compress css and js and minify these and also run nodemon
+and then browse http://localhost:3000
+
+
+
+
