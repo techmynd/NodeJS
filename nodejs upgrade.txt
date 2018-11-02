@@ -1,0 +1,37 @@
+http://exponential.io/blog/install-or-upgrade-nodejs-on-windows/
+====================
+
+
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+
+> npm install --global --production npm-windows-upgrade
+> npm-windows-upgrade
+
+Want to just install the latest version? Sure:
+> npm-windows-upgrade --npm-version latest
+
+npm-windows-upgrade
+source: https://github.com/felixrieseberg/npm-windows-upgrade
+
+or
+
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+npm install -g npm-windows-upgrade
+npm-windows-upgrade
+
+https://stackoverflow.com/questions/18412129/how-can-i-update-npm-on-windows
+
+==========================================
+
+or
+
+To update NPM:
+
+Navigate in your shell to your node installation directory, eg C:\Program Files (x86)\nodejs
+
+run 
+> npm install npm (no -g option)
+
+
+
+

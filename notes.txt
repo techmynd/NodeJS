@@ -29,3 +29,11 @@ create entry point file
 > touch index.js
 
 echo 'hello' >> index.js
+
+
+==================================
+
+upgrade node version
+
+https://github.com/felixrieseberg/npm-windows-upgrade
+
