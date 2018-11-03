@@ -1,3 +1,5 @@
+Node is not programming language and not a framework. Its a runtime environment for executing javascrip code.
+
 if setup gives error of gulp and is not running
 remove node modules 
 
