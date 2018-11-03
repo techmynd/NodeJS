@@ -1,0 +1,15 @@
+node core modules
+
+os > operating system
+fs > file system
+events > events
+http > http
+
+you cna also create your own modules
+
+https://www.youtube.com/watch?v=TlB_eWDSMt4
+
+const fs = require('fs');
+const os = require('os');
+
+
