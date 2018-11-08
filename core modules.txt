@@ -1,0 +1,21 @@
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
+
+http
+https
+fs
+path
+os
+
+
+this
+const http = require('http');
+means http in ('http') is global module
+
+this
+const http = require('./http');
+means ./http in ('./http') is a file named as http.js in same folder
+

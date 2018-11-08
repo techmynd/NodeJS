@@ -1,0 +1,11 @@
+{
+  "name": "1-nodejs-start",
+  "version": "1.0.0",
+  "description": "Just a simple nodejs hello world script",
+  "main": "index.js",
+  "scripts": {
+  	"start": "node src/index.js"
+  },
+  "author": "Muhammad Javed Khalil",
+  "license": "MIT"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "2-server",
+  "version": "1.0.0",
+  "description": "Just a simple nodejs script",
+  "main": "index.js",
+  "scripts": {
+  	"start": "node app.js"
+  },
+  "author": "Muhammad Javed Khalil",
+  "license": "MIT"
+}
