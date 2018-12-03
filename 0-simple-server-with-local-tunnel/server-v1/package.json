@@ -1,0 +1,18 @@
+{
+  "name": "1-nodejs-start",
+  "version": "1.0.0",
+  "description": "Just a simple nodejs localhost server to run files via server - great with localtunnel to share localhost project globally for a given time or session",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "go": "lt --port 3000"
+  },
+  "author": "mjk",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "global": "^4.3.2",
+    "localtunnel": "^1.9.1",
+    "serve-static": "^1.13.2"
+  }
+}

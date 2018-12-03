@@ -1,0 +1,43 @@
+install dependencies
+===================
+> npm install
+> yarn install
+
+Keep your files in src folder / lets say you want to run about.html from src folder 
+
+run server
+===========
+> yarn run start
+or
+> npm run start
+
+go to url to see it running
+============================
+http://localhost:3000
+http://localhost:3000/about.html
+
+And then open another instance of npm / cli and run command
+
+> yarn run go
+or 
+> npm run go
+
+and share the new given url like 
+=================================
+https://heavy-elephant-27.localtunnel.me/about.html
+
+Requirements
+============
+serve-static, localtunnel, global, connect
+
+localtunnel should be installed globally on your machine 
+
+> yarn add localtunnel global
+or
+> npm install localtunnel -g
+
+
+
+
+
+
