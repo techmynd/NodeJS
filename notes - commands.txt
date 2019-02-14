@@ -1,0 +1,10 @@
+
+// full directory path
+console.log(__dirname);
+
+// directory path and filename
+console.log(__filename);
+
+command to run file in console
+> node file-name
+

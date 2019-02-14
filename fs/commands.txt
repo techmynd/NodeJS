@@ -1,0 +1,6 @@
+> node filename
+
+> node delete.js
+
+> node read.js
+
