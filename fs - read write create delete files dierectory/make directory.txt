@@ -1,0 +1,26 @@
+var fs = require('fs');
+
+
+//create directory
+
+fs.mkdirSync('new-directory');
+
+// or asynchronously
+fs.mkdir('new-directory', function(){
+  fs.writeFile('./new-directory/newfile.txt', "some new text");
+});
+
+
+// remove directory
+fs.rmdirSync('new-directory');
+
+fs.unlink('./new-directory')
+
+// to remove directory, it should be empty.
+fs.rmdirSync('new-directory/newfile.txt', function(){
+  fs.rmdir('new-directory');
+});
+
+
+
+

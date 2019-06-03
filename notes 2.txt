@@ -1,0 +1,84 @@
+Export function or variable by name
+===================================
+> logger.js
+
+var url = "http://www.msn.com";
+
+function log(message) {
+  console.log(message);
+}
+
+module.exports.log = log;
+module.exports.url = url;
+or
+module.exports = log; // exporting a function
+module.exports = url; // exporting a variable
+
+Import Module
+=============
+require(./logger.js);
+or
+require(./logger); // node assumes that its a js file
+
+Log contents of a file/module
+============================
+let logger = require("./index.js");
+console.log(logger);
+
+logger.log("hello world");
+
+=============================
+
+Run a module
+=============
+> node filename.js
+
+======================
+
+Builtin Modules
+===============
+Path
+const path = require('path');
+var filepath = path.parse(__filename);
+OS
+const os = require('os');
+
+fs
+const fs = require('fs');
+const files = fs.readdirSync('./');
+console.log(files);
+
+// Asynchronously Read Directory 
+fs.readdir('./', function(err, files){
+  if(err){
+    console.log("Error", err);
+  } else {
+    console.log("Results", files);
+  }
+}); 
+
+
+Events
+const EventEmitter = require('events'); // class
+// EventEmitter is class
+const emitter = new EventEmitter(); // object
+// class is like human (with properties) and object is like actual person with name and so
+emitter.on('messageLogged', (e) => {
+  console.log('Listener called', e);
+});
+emitter.emit('messageLogged');
+
+http
+const http = require('http');
+
+
+
+
+
+
+
+
+
+
+
+

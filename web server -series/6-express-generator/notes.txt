@@ -1,0 +1,7 @@
+> npm express-generator -g
+> express myapp
+
+create express based web server and config files by express-generator
+
+
+
