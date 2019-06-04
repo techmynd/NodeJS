@@ -1,0 +1,18 @@
+list notes
+===========
+> node app.js list
+
+add note
+========
+> node app.js add --title="note title" --body="note body goes here"
+
+remove note
+===========
+> node app.js remove --title="note title"
+
+read note details
+=================
+> node app.js read --title="note title"
+
+
+
