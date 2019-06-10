@@ -1,0 +1,76 @@
+> yarn run start
+> yarn run start:dev
+
+http://localhost:3000/
+
+
+
+products
+========
+http://localhost:3000/products
+
+post
+----
+{
+	"name": "Harry Potter 1",
+	"price": "10",
+	"description": "Some text here"
+}
+
+get product
+------------
+http://localhost:3000/products/id
+
+patch
+-----
+http://localhost:3000/products/id
+[
+	{ "propName": "name", "value": "Harry Potter 1" },
+	{ "propName": "description", "value": "Some text here again" }
+]
+
+delete
+------
+http://localhost:3000/products/id
+
+
+
+
+
+
+
+
+
+
+
+orders
+======
+http://localhost:3000/orders
+
+post
+----
+{
+	"productId": "1234",
+	"quantity": "2"
+}
+
+get
+---
+http://localhost:3000/orders/id
+
+delete
+---
+http://localhost:3000/orders/id
+
+patch
+------
+http://localhost:3000/orders/id
+
+[
+	{ "propName": "quantity", "value": "20" }
+]
+
+
+
+
+
