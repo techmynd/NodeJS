@@ -14,6 +14,9 @@ mongoose.connect(
 );
 */
 
+// local mongoDB connect string
+// mongoose.connect("mongodb://localhost:27017/databasename");
+
 // save password in .env file or nodemon.json file
 // don't hardcode password
 require("dotenv/config");
