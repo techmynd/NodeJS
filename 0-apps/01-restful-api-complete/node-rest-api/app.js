@@ -5,28 +5,26 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 // connect mongoose to atlas - MongoDB
-
+/*
 mongoose.connect(
-  "mongodb+srv://tm-first-usr:23Ji0EeyY61ur794@cluster-first-test-8qrfn.mongodb.net/test?retryWrites=true&w=majority",
+  "mongodb+srv://tm-first-usr:***PASSWORD***@cluster-first-test-8qrfn.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
   },
 );
+*/
 
 // save password in .env file or nodemon.json file
-// don't hardcode password here like above
-// not working
-/*
+// don't hardcode password
+require("dotenv/config");
 mongoose.connect(
   "mongodb+srv://tm-first-usr:" +
-    process.env.MONGO_ATLAS_PW +
+    process.env.DB_PASS +
     "@cluster-first-test-8qrfn.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
   },
 );
-// this {useMongoClient: true} is not needed in mongoose connection now
-*/
 
 // middleware
 // just a logging mechanism

@@ -1,3 +1,11 @@
+// processes
+// require the secret keys and info
+/*
+require("dotenv/config");
+console.log(process.env.DB_PASS);
+*/
+/////////////////////////////////
+
 const http = require("http");
 const app = require("./app");
 
