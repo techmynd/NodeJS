@@ -6,7 +6,16 @@ const mongoose = require("mongoose");
 // import order schema
 const Order = require("../models/orders");
 
-// get requests for orders
+// router.get(req, res, next);
+// router.post(req, res, next);
+// router.patch(req, res, next);
+// router.delete(req, res, next);
+
+// Get requests for orders //////////////////////
+// @route   GET /orders
+// @desc    Get route for orders
+// @access  Public
+// http://localhost:3001/orders
 router.get("/", (req, res, next) => {
   Order.find()
     .exec()
@@ -29,9 +38,21 @@ router.get("/", (req, res, next) => {
   //   message: "Get requests to /orders, orders were fetched",
   // });
 });
-// GET
-// http://localhost:3000/orders
 
+// Post request for orders //////////////////////////
+// @route   POST /orders
+// @desc    Post route for orders
+// @access  Public
+// http://localhost:3001/orders
+/* postman template
+via postman post > http://localhost:3001/orders
+and create an object by selecting > Body > Raw > JSON
+{
+	"orderId": "1234",
+	"quantity": "2"
+}
+and send
+*/
 // post requests for orders
 // post requests for orders will receive contents like productId and quantity
 // we create api docs to let user know what type of info this end point receives
@@ -65,19 +86,14 @@ router.post("/", (req, res, next) => {
   //   orderCreated: newOrder,
   // });
 });
-// POST
-// http://localhost:3000/orders
-/*
-via postman post > http://localhost:3000/products
-and create an object by selectinng > Body > Raw > JSON
-{
-	"productId": "1234",
-	"quantity": "2"
-}
-and send
-*/
 
-// orders Id get request
+// Get request for single order ////////////////////////
+// @route   Get /orders/orderid
+// @desc    Get route for single order
+// @access  Public
+// http://localhost:3001/orders/123
+// http://localhost:3001/orders/special
+// http://localhost:3001/orders/5cfd8a6973a543259843e651
 router.get("/:orderId", (req, res, next) => {
   const id = req.params.orderId;
   // if (id === "special") {
@@ -105,11 +121,19 @@ router.get("/:orderId", (req, res, next) => {
   //   message: "Order ID: " + id,
   // });
 });
-// http://localhost:3000/orders/123
-// http://localhost:3000/orders/special
-// http://localhost:3000/orders/5cfd8a6973a543259843e651
 
-// update order
+// Patch request for single order ////////////////////////
+// @route   Patch /orders/orderid
+// @desc    Patch route for single order
+// @access  Public
+// Partially update single order
+// http://localhost:3001/orders/123
+// http://localhost:3001/orders/5cfd8e3673a543259843e653
+/* postman template
+[
+	{ "propName": "quantity", "value": "20" }
+]
+*/
 router.patch("/:orderId", (req, res, next) => {
   const id = req.params.orderId;
   const updateOps = {};
@@ -130,16 +154,14 @@ router.patch("/:orderId", (req, res, next) => {
   //   message: id + " Order updated",
   // });
 });
-// patch
-// http://localhost:3000/orders/123
-// http://localhost:3000/orders/5cfd8e3673a543259843e653
-/*
-[
-	{ "propName": "quantity", "value": "20" }
-]
-*/
 
-// delete product
+// Delete request for single order ////////////////////////
+// @route   Delete /orders/orderid
+// @desc    Delete route for single order
+// @access  Public
+// delete order request
+// http://localhost:3001/orders/123
+// http://localhost:3001/orders/5cfd8a6973a543259843e651
 router.delete("/:orderId", (req, res, next) => {
   const id = req.params.orderId;
   Order.remove({ _id: id })
@@ -155,8 +177,5 @@ router.delete("/:orderId", (req, res, next) => {
   //   message: id + " Order deleted",
   // });
 });
-// delete
-// http://localhost:3000/orders/123
-// http://localhost:3000/orders/5cfd8a6973a543259843e651
 
 module.exports = router;

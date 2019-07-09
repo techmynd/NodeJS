@@ -3,6 +3,8 @@ const app = express();
 // body parser extracts request body from request > post request
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+// just a logging mechanism
+const morgan = require("morgan");
 
 // connect mongoose to atlas - MongoDB
 /*
@@ -29,11 +31,10 @@ mongoose.connect(
   },
 );
 
-// middleware
-// just a logging mechanism
-const morgan = require("morgan");
+// Morgan middleware
 app.use(morgan("dev"));
 
+// Body parser middleware
 // enable body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -78,6 +79,9 @@ app.use((req, res, next) => {
 */
 
 // default route
+// @route   GET /
+// @desc    Get root route
+// @access  Public
 app.get("/", (req, res, next) => {
   res.status(200).json({
     message: "it works...",

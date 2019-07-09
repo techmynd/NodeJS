@@ -6,8 +6,19 @@ const mongoose = require("mongoose");
 // import product schema
 const Product = require("../models/products");
 
-// get requests for products
+// router.get(req, res, next);
+// router.post(req, res, next);
+// router.patch(req, res, next);
+// router.delete(req, res, next);
+
+// Get requests for products //////////////////////
+// @route   GET /products
+// @desc    Get route for products
+// @access  Public
+// http://localhost:3001/products
 router.get("/", (req, res, next) => {
+  // if you want to sort use .sort({ date: -1 }) after exec but date should be in record
+  // use Date.now to create date
   Product.find()
     .exec()
     .then(docs => {
@@ -29,10 +40,22 @@ router.get("/", (req, res, next) => {
   //   message: "Get requests to /products",
   // });
 });
-// GET
-// http://localhost:3000/products
 
-// post requests for products
+// Post requests for products //////////////////////
+// @route   POST /products
+// @desc    POST route for products
+// @access  Public
+// http://localhost:3001/products
+/* postman template
+via postman post > http://localhost:3001/products
+and create an object by selectinng > Body > Raw > JSON
+{
+	"name": "Harry Potter 5",
+	"price": "50",
+	"description": "Some text here"
+}
+and send
+*/
 // post requests will receive contents like name, price, description
 // we create api docs to let user know what type of info this end point receives
 // we have used body parser to parse such requests
@@ -68,20 +91,15 @@ router.post("/", (req, res, next) => {
   //   createdProduct: newProduct,
   // });
 });
-// POST
-// http://localhost:3000/products
-/*
-via postman post > http://localhost:3000/products
-and create an object by selectinng > Body > Raw > JSON
-{
-	"name": "Harry Potter 5",
-	"price": "50",
-	"description": "Some text here"
-}
-and send
-*/
 
+// Get request for single product //////////////////////
+// @route   GET /products/productid
+// @desc    Get route for single product
+// @access  Public
 // product Id get request
+// http://localhost:3001/products/123
+// http://localhost:3001/products/special
+// http://localhost:3001/products/5cfd8ea073a543259843e655
 router.get("/:productId", (req, res, next) => {
   const id = req.params.productId;
   // if (id === "special") {
@@ -109,10 +127,19 @@ router.get("/:productId", (req, res, next) => {
   //   message: "Product ID: " + id,
   // });
 });
-// http://localhost:3000/products/123
-// http://localhost:3000/products/special
-// http://localhost:3000/products/5cfd8ea073a543259843e655
 
+// Patch request for single product //////////////////////
+// @route   PATCH /products/productid
+// @desc    Patch route for single product
+// @access  Public
+// http://localhost:3001/products/123
+// patch syntax for postman for this route
+/*
+[
+	{ "propName": "name", "value": "Harry Potter 1" },
+	{ "propName": "description", "value": "Some text here" }
+]
+*/
 // update product
 router.patch("/:productId", (req, res, next) => {
   const id = req.params.productId;
@@ -134,16 +161,13 @@ router.patch("/:productId", (req, res, next) => {
   //   message: id + " Product updated",
   // });
 });
-// patch
-// http://localhost:3000/products/123
-// patch syntax for postman
-/*
-[
-	{ "propName": "name", "value": "Harry Potter 1" },
-	{ "propName": "description", "value": "Some text here" }
-]
-*/
 
+// Delete request for single product //////////////////////
+// @route   DELETE /products/productid
+// @desc    Delete route for single product
+// @access  Public
+// http://localhost:3001/products/123
+// http://localhost:3001/products/5cfd8a6973a543259843e651
 // delete product
 router.delete("/:productId", (req, res, next) => {
   const id = req.params.productId;
@@ -160,8 +184,5 @@ router.delete("/:productId", (req, res, next) => {
   //   message: id + " Product deleted",
   // });
 });
-// delete
-// http://localhost:3000/products/123
-// http://localhost:3000/products/5cfd8a6973a543259843e651
 
 module.exports = router;
