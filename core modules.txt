@@ -3,12 +3,17 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const events = require('events');
+const util = require('util');
 
 http
 https
 fs
 path
 os
+events
+util
+
 
 
 this
