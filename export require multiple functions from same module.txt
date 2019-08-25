@@ -1,0 +1,53 @@
+var funOne = function(a,b){
+  return `${a+b}`;
+}
+
+var funTwo = function(c,d){
+  return `${c+d}`;
+}
+
+var funThree = function(e,f){
+  return `${e+f}`;
+}
+
+// export methods
+
+module.exports.funThree = function(e,f){
+  return `${e+f}`;
+}
+
+// or
+
+module.exports.funOne = funOne;
+module.exports.funTwo = funTwo;
+module.exports.funThree = funThree;
+
+// or
+
+module.exports = {
+  funOne: funOne,
+  funTwo: funTwo,
+  funThree: funThree
+};
+
+// or in case names are same 
+
+module.exports = {
+  funOne,
+  funTwo,
+  funThree
+};
+
+
+//////////////////
+
+// require in other module
+// let say above file name was stuff.js
+
+var stuff = require(./stuff);
+
+console.log(stuff.funOne(1+2));
+console.log(stuff.funTwo(1+2));
+console.log(stuff.funThree(1+2));
+
+
